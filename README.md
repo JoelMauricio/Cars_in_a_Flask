@@ -4,7 +4,7 @@ La presente práctica busca que cada estudiante ponga en práctica varios de los
 
 El proyecto, aunque funcional es un proyecto poco maduro; por ello se solicita a cada estudiante el que implemente los siguientes principios.
 
-1. Repositorio (_code base_).
+1. Repositorio (_code base_).---
 2. Dependencias.---
 3. Configuración.
 4. Servicios de Apoyo.

@@ -2,9 +2,13 @@ from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+from os import environ as env
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5433/cars_api"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5433/cars_api"#env['SQLALCHEMY_DATABASE_URI']#"postgresql://postgres:postgres@localhost:5433/cars_api"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False#env['SQLALCHEMY_TRACK_MODIFICATIONS']#False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
